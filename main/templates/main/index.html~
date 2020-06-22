@@ -1,0 +1,100 @@
+
+
+{% extends 'main/base.html' %}
+{% block title %}RayTicle -Write{% endblock title %}
+
+{% block content %}
+<div class="container">
+  <form method="post" enctype="multipart/form-data">
+				{% csrf_token %}
+    <h2>Rayticle Your Short Blog!</h2>
+    <br />
+    <div class="row">
+      <div class="col-md-6">
+        <div class="form-group">
+          <label for="first">Title</label>
+          <input name="title" type="text" required="required" class="form-control" placeholder="" id="first">
+        </div>
+      </div>
+      <!--  col-md-6   -->
+      
+      <div class="col-md-6">
+        <div class="form-group">
+          <label for="first">Keyphrase</label>
+          <input name="keyphrase" type="text" required="required" class="form-control" placeholder="" id="first">
+        </div>
+      </div>
+      <!--  col-md-6   -->
+
+      <div class="col-md-6">
+        <div class="form-group">
+          <label for="last">Headlines</label>
+          <input name="headlines" type="text" required="required" class="form-control" placeholder="" id="last">
+          <small>seperate headlines with comma</small>
+        </div>
+      </div>
+      <!--  col-md-6   -->
+    </div>
+
+
+    <div class="row">
+      <div class="col-md-6">
+        <div class="form-group">
+          <label for="company">Content</label>
+          <textarea name="content" rows="5" required="required" type="text" class="form-control" placeholder="" id="editor"></textarea>
+        </div>
+
+
+      </div>
+      <!--  col-md-6   -->
+      
+      <div class="col-md-6">
+        <div class="form-group">
+          <label for="last">Question</label>
+          <input name="question" type="text" required="required" class="form-control" placeholder="" id="last">
+        </div>
+      </div>
+      <!--  col-md-6   -->
+
+      <div class="col-md-6">
+
+        <div class="form-group">
+         <label for="company">Quote</label>
+          <textarea name="tweet_quote" rows="5" required="required" type="text" class="form-control" placeholder="" id="company"></textarea>
+        </div>
+      </div>
+      <!--  col-md-6   -->
+    </div>
+    <!--  row   -->
+
+
+    <div class="row">
+      <div class="col-md-6">
+
+        <div class="form-group">
+         <label for="company">Most Gist</label>
+          <textarea name="more_gist" rows="5" required="required" type="text" class="form-control" placeholder=""></textarea>
+        </div>
+      </div>
+      <!--  col-md-6   -->
+
+      <div class="col-md-6">
+
+
+      </div>
+      <!--  col-md-6   -->
+    </div>
+    <!--  row   -->
+
+
+
+
+    
+
+
+    <button type="submit" class="btn btn-primary">Submit</button>
+  </form>
+</div>
+<br />
+<br />
+{% endblock %}

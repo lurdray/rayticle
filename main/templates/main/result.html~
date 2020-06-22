@@ -1,0 +1,49 @@
+{% extends 'main/base.html' %}
+{% block title %}RayTicle -Result{% endblock title %}
+
+{% block content %}
+
+
+
+
+<div class="card text-center container">
+  <div class="card-header">
+    <h2>Your Result......</h2>
+    <hr>
+  </div>
+  <div class="card-body">
+    <h5 class="card-title"><b>{{ article.title }}</b></h5><br /><br />
+    <p class="card-text">{{ article.keyphrase }}</p>
+    <p class="card-text">{{ opening_statement }}</p><br /><br /><hr>
+     <p class="card-text">Read Quickly(don't miss out!): <a href="{{ did_you_miss.link }}">{{ did_you_miss }}</a></p><hr><br /><br />
+      <p class="card-text">{{ in_this_post }}<br/>{{ article.keyphrase }}</p><br /><br />
+      <p class="card-text">Headlines: {{ article.headlines }}</p><br /><br /><br />
+      <h3 class="card-text">The Real Deal:</h3>
+       <p class="card-text">{{ article.content |safe }}</p><br /><br />
+        <p class="card-text">Quick Question: {{ article.question }}</p>
+         <small class="card-text">Leave your opinion in the comment session.</small><br /><br /><hr>
+       <b class="card-text">Tweetline: {{ article.tweet_quote }}<hr></b><br /><br />
+        <p class="card-text">Read Quckly: <a href="{{ link_one }}">{{ link_one.title }}</a></p><br /><br /><br />
+         <h3 class="card-text">More Gist:</h3>
+      <p class="card-text">{{ article.more_gist }}</p>
+       <p class="card-text">Read now: <a href="{{ link_two }}">{{ link_two.title }}</a></p><br /><br /><br />
+      <p class="card-text"><b>Games Time!</b></p>
+      <p class="card-text">{{ game }}</p><br /><br /><br />
+       <p class="card-text">{{ encourage_comeback }}</p>
+       <p class="card-text">{{ subscription_talk }}</p>
+       <p><a href="https://africamagic.dstv.com">Big Brother Naija!</a></p>
+      
+    <br /><br /><br />
+    <a href="{% url 'index' %}" class="btn btn-primary">Back!</a>
+  </div>
+  <br />
+  <br />
+  <div class="card-footer text-muted">
+  <hr>
+   <b>Powered by RayTechNG</b>
+  </div>
+</div>
+
+
+{% endblock %}
+
