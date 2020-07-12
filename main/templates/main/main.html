@@ -1,0 +1,41 @@
+
+
+{% extends 'main/base2.html' %}
+{% block title %}RayTicle -Home{% endblock title %}
+
+{% block content %}
+
+<div class="jumbotron">
+  <div class="jumbotron__body">
+    <div class="container">
+      <h1>RayTicle for Bloggers!</h1>
+      <br />
+      <br />
+      <small style="color: white;">Compose your short blog and let Rayticle finish up for ya!. <br /> <br />-Works like magic!.</small>
+      	 <br />
+      <br /> <br />
+      <br /> <br />
+      <br />
+      <p>
+        <a class="btn btn-primary btn-lg" href="{% url 'index' %}" role="button">Compose!</a>
+        <a class="btn btn-default btn-lg" href="{% url 'all' %}" role="button">Database</a>
+      </p>
+      <div class="jumbotron__topad">
+         
+          <br /> <br /> <br /> <br /> <br /> <br /> <br /> <br /> <br /> <br /> <br />
+          <a href="#">
+           Powered by RayTechNG
+          </a>
+      </div>
+    </div>
+  </div>
+  <div class="jumbotron__background" 
+       data-vide-bg="mp4: https://analytics.ispot.tv/download/media4/001/276/701/Aw_w.mp4, webm: https://analytics.ispot.tv/download/media4/001/276/701/Aw_w.webm, poster: https://analytics.ispot.tv/download/media4/001/276/701/Aw_w_8.jpg"
+       data-vide-options="posterType: jpg, loop: true, muted: true, position: 50% 50%">
+  </div>
+  
+
+
+
+
+{% endblock %}

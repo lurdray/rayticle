@@ -1,0 +1,49 @@
+
+
+{% extends 'main/base2.html' %}
+{% block title %}RayTicle -Home{% endblock title %}
+
+{% block content %}
+
+<div class="jumbotron">
+  <div class="jumbotron__body">
+    <div class="container">
+      <p>
+        <a class="btn btn-primary btn-lg" href="{% url 'index' %}" role="button">Compose!</a>
+      </p>
+      <div class="jumbotron__topad">
+          <h2><strong><i class="fa fa-bar-chart"></i> Top 12 Posts!</strong></h2>
+          {% if posts %}
+          <ul>
+          	{% for post in posts %}
+          
+          	<li>
+          		 <a href="{% url 'single_post' post.id %}">
+				    {{ post.title }}
+				  </a>	  
+          	</li>
+			{% endfor %}
+          </ul>
+          
+          {% else %}
+          	<p>Sorry, Nothing Yet!</p>
+          	
+          {% endif %}
+          
+          <br /> <br /> <br /> <br /> <br /> <br /> <br /> <br /> <br /> <br /> <br />
+          <a href="#">
+            Powered by RayTechNG
+          </a>
+      </div>
+    </div>
+  </div>
+  <div class="jumbotron__background" 
+       data-vide-bg="mp4: https://analytics.ispot.tv/download/media4/001/276/701/Aw_w.mp4, webm: https://analytics.ispot.tv/download/media4/001/276/701/Aw_w.webm, poster: https://analytics.ispot.tv/download/media4/001/276/701/Aw_w_8.jpg"
+       data-vide-options="posterType: jpg, loop: true, muted: true, position: 50% 50%">
+  </div>
+  
+
+
+
+
+{% endblock %}
