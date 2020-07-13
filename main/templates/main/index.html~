@@ -72,7 +72,7 @@
       <div class="col-md-6">
 
         <div class="form-group">
-         <label for="company">Most Gist</label>
+         <label for="company">More Gist</label>
           <textarea name="more_gist" rows="5" required="required" type="text" class="form-control" placeholder=""></textarea>
         </div>
       </div>
