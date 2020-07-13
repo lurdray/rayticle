@@ -16,7 +16,7 @@ def AllView(request):
 	
 	
 def SinglePostView(request, post_id):
-	article = Article.objects.filter(id=post_id)
+	article = Article.objects.get(id=post_id)
 	opening_statement = OpeningStatement.objects.random()
 	did_you_miss = DidYouMiss.objects.random()
 	in_this_post = InThisPost.objects.random()
